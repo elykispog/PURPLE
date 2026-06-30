@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"UI",
+  "%Name":"SPELL",
   "eventList":[],
   "managed":true,
-  "name":"UI",
+  "name":"SPELL",
   "overriddenProperties":[],
   "parent":{
-    "name":"flowey",
-    "path":"folders/battle/flowey.yy",
+    "name":"objects",
+    "path":"folders/objects.yy",
   },
   "parentObjectId":null,
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"battleUI_1",
+    "path":"sprites/battleUI_1/battleUI_1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
