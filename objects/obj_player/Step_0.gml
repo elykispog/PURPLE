@@ -8,6 +8,7 @@ var _hsp = _horizontal_input * _spd;
 var _vsp = _vertical_input * _spd;
 move_and_collide(_hsp, _vsp, obj_invisiblewall);
 
+
 // 3. Animation and Sprite Management
 if (_horizontal_input == 0 && _vertical_input == 0) 
 {
