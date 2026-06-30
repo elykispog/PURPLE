@@ -22,8 +22,7 @@ else
     image_speed = 1;
     
     // Change sprite based on the direction of movement
-	if (!is_frozen){
-    if (_horizontal_input != 0) 
+    if (_horizontal_input != 0) {
     
         if (_horizontal_input > 0) sprite_index = rsprite;
         else sprite_index = lsprite;
