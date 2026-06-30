@@ -17,7 +17,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":29,
+  "height":30,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"cb40b93f-05b0-44f9-a62c-2fd15664a1c4","blendMode":0,"displayName":"default","isLocked":false,"name":"cb40b93f-05b0-44f9-a62c-2fd15664a1c4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"sprites",
-    "path":"folders/sprites.yy",
+    "name":"player",
+    "path":"folders/sprites/player.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
