@@ -1,8 +1,15 @@
 // 1. Get input
 var _horizontal_input = keyboard_check(vk_right) - keyboard_check(vk_left);
 var _vertical_input = keyboard_check(vk_down) - keyboard_check(vk_up);
+if (global.flowey_cutscene1 == true) {
+	image_index = 0
+	sprite_index = usprite}
+	if (global.lookdown == true) {
+	image_index = 0
+	sprite_index = dsprite}
 
 // 2. Define your speeds
+if (global.cutscene_active == false) {
 var _spd = 3;
 var _hsp = _horizontal_input * _spd;
 var _vsp = _vertical_input * _spd;
@@ -32,4 +39,4 @@ else
         if (_vertical_input > 0) sprite_index = dsprite;
         else sprite_index = usprite;
     }
-}
+}}
