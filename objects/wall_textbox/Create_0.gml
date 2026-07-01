@@ -1,3 +1,5 @@
+event_inherited();
+
 myTextbox = noone;
 
 myText[0] = "* You thought about CLIMBing the wall."

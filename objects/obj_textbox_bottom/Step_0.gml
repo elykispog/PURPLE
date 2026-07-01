@@ -1,14 +1,14 @@
-if(keyboard_check_pressed(ord("Z"))){
-
-	if(page+1 < array_length(text)){
-	page += 1;
-	charCount = 0;
-	global.cutscene_active = false;
-} else { instance_destroy();
-	creator.alarm[1] = 1;
-}
-}
-
-if(keyboard_check_pressed(ord("X"))){
-	charCount = 300
+if (keyboard_check_pressed(global.key_confirm)) {
+    if (charCount < string_length(text[page])) {
+        charCount = string_length(text[page]);
+    } else {
+        if (page + 1 < array_length(text)) {
+            page++;
+            charCount = 0;
+        } else {
+            global.cutscene_active = false;
+            creator.alarm[1] = 1;
+            instance_destroy();
+        }
+    }
 }
