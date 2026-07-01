@@ -15,7 +15,7 @@
     "name":"parent_interactable_text",
     "path":"objects/parent_interactable_text/parent_interactable_text.yy",
   },
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

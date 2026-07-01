@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"wall_textbox",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_savePoint",
+  "eventList":[],
   "managed":true,
-  "name":"wall_textbox",
+  "name":"obj_savePoint",
   "overriddenProperties":[],
   "parent":{
-    "name":"ruins",
-    "path":"folders/objects/invisible_text_boxes/ruins.yy",
+    "name":"objects",
+    "path":"folders/objects.yy",
   },
-  "parentObjectId":{
-    "name":"parent_interactable_text",
-    "path":"objects/parent_interactable_text/parent_interactable_text.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"textboxinvis",
-    "path":"sprites/textboxinvis/textboxinvis.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
