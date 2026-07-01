@@ -1,10 +1,13 @@
 event_inherited();
 
 dialogue = {
-	pages: [
-		"* Strangely...",
-		"* The smell of invisible ink fills you with perseverance.",
-	],
+	start: {
+		pages: [
+			"* Strangely...",
+			"* The smell of invisible ink fills you with perseverance.",
+		],
+		choices: {}
+	},
 	
 	on_end: function() {
 		instance_create_layer(0, 0, "Text", obj_savebox, { saveLocation: "Ruins" });

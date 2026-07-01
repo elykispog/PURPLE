@@ -37,8 +37,8 @@ function dialogue_load_node(_key) {
     selectedChoice = 0;
 }
 
-xBuffer = 35;
-yBuffer = 30;
+xBuffer = 25;
+yBuffer = 20;
 boxWidth = sprite_get_width(spr_textbox) - (2*xBuffer);
 stringHeight = 50;
 
