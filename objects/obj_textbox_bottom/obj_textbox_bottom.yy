@@ -1,21 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"wall_textbox",
+  "%Name":"obj_textbox_bottom",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"wall_textbox",
+  "name":"obj_textbox_bottom",
   "overriddenProperties":[],
   "parent":{
-    "name":"ruins",
-    "path":"folders/objects/invisible_text_boxes/ruins.yy",
+    "name":"ui",
+    "path":"folders/objects/ui.yy",
   },
-  "parentObjectId":{
-    "name":"parent_interactable_text",
-    "path":"objects/parent_interactable_text/parent_interactable_text.yy",
-  },
-  "persistent":true,
+  "parentObjectId":null,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -32,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"textboxinvis",
-    "path":"sprites/textboxinvis/textboxinvis.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,4 +1,5 @@
 myTextbox = noone;
-myText[0] = "You thought maybe you could CLIMB"
-myText[1] = "..."
-myText[2] = "You were wrong."
+
+myText[0] = "* You thought about CLIMBing the wall."
+myText[1] = "* ..."
+myText[2] = "* If only you were stronger."

@@ -36,7 +36,9 @@
     {"$GMFolder":"","%Name":"spritesheets","folderPath":"folders/sprites/spritesheets.yy","name":"spritesheets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ui","folderPath":"folders/sprites/ui.yy","name":"ui","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "ForcedPrefabProjectReferences":[],
+  "ForcedPrefabProjectReferences":[
+    {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
+  ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"PixelOperator-Bold.ttf","CopyToMask":-1,"filePath":"datafiles","name":"PixelOperator-Bold.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
@@ -54,8 +56,10 @@
     {"id":{"name":"obj_flowey","path":"objects/obj_flowey/obj_flowey.yy",},},
     {"id":{"name":"obj_invisiblewall","path":"objects/obj_invisiblewall/obj_invisiblewall.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
-    {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},},
+    {"id":{"name":"obj_textbox_bottom","path":"objects/obj_textbox_bottom/obj_textbox_bottom.yy",},},
+    {"id":{"name":"obj_textbox_top","path":"objects/obj_textbox_top/obj_textbox_top.yy",},},
     {"id":{"name":"obj_title_menu","path":"objects/obj_title_menu/obj_title_menu.yy",},},
+    {"id":{"name":"parent_interactable_text","path":"objects/parent_interactable_text/parent_interactable_text.yy",},},
     {"id":{"name":"SPELL","path":"objects/SPELL/SPELL.yy",},},
     {"id":{"name":"transgenderRoom1","path":"objects/transgenderRoom1/transgenderRoom1.yy",},},
     {"id":{"name":"wall_textbox","path":"objects/wall_textbox/wall_textbox.yy",},},

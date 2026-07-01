@@ -8,13 +8,14 @@ if (global.flowey_cutscene1 == true) {
 	image_index = 0
 	sprite_index = dsprite}
 
+
+
 // 2. Define your speeds
 if (global.cutscene_active == false) {
-var _spd = 3;
-var _hsp = _horizontal_input * _spd;
-var _vsp = _vertical_input * _spd;
-move_and_collide(_hsp, _vsp, obj_invisiblewall);
-
+	var _spd = 3;
+	var _hsp = _horizontal_input * _spd;
+	var _vsp = _vertical_input * _spd;
+	move_and_collide(_hsp, _vsp, obj_invisiblewall);
 
 // 3. Animation and Sprite Management
 if (_horizontal_input == 0 && _vertical_input == 0) 
@@ -40,3 +41,4 @@ else
         else sprite_index = usprite;
     }
 }}
+
