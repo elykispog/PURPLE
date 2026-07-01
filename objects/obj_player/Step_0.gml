@@ -19,10 +19,10 @@ if (!global.cutscene_active) {
     var _hsp = _horizontal_input * _spd;
     var _vsp = _vertical_input * _spd;
 
-    if ((_dx != 0 && _dy != 0) && place_meeting(x, y, obj_invisiblewall)) {
-        var l = point_distance(0, 0, _dx, _dy);
-        _hsp = (_dx / l) * _spd;
-        _vsp = (_dy / l) * _spd;
+    if ((_horizontal_input != 0 && _vertical_input != 0) && place_meeting(x, y, obj_invisiblewall)) {
+        var l = point_distance(0, 0, _horizontal_input, _vertical_input);
+        _hsp = (_horizontal_input / l) * _spd;
+        _vsp = (_vertical_input / l) * _spd;
     }
 
     move_and_collide(_hsp, _vsp, obj_invisiblewall);
