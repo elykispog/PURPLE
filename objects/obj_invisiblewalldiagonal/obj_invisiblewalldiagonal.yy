@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_invisiblewall",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_invisiblewalldiagonal",
+  "eventList":[],
   "managed":true,
-  "name":"obj_invisiblewall",
+  "name":"obj_invisiblewalldiagonal",
   "overriddenProperties":[],
   "parent":{
     "name":"objects",
@@ -23,21 +21,16 @@
   "physicsRestitution":0.1,
   "physicsSensor":false,
   "physicsShape":1,
-  "physicsShapePoints":[
-    {"x":0.0,"y":0.0,},
-    {"x":32.0,"y":0.0,},
-    {"x":32.0,"y":32.0,},
-    {"x":0.0,"y":32.0,},
-  ],
+  "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_invisiblewall",
-    "path":"sprites/spr_invisiblewall/spr_invisiblewall.yy",
+    "name":"spr_invisiblewalldiagonal",
+    "path":"sprites/spr_invisiblewalldiagonal/spr_invisiblewalldiagonal.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

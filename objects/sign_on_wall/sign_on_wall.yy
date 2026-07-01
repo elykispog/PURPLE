@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_savePoint",
+  "%Name":"sign_on_wall",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_savePoint",
+  "name":"sign_on_wall",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"ruins",
+    "path":"folders/objects/invisible_text_boxes/ruins.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"parent_interactable_text",
+    "path":"objects/parent_interactable_text/parent_interactable_text.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_savePoint",
-    "path":"sprites/spr_savePoint/spr_savePoint.yy",
+    "name":"textboxinvis",
+    "path":"sprites/textboxinvis/textboxinvis.yy",
   },
   "spriteMaskId":null,
   "visible":true,
