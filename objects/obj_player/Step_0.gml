@@ -3,6 +3,10 @@ var _horizontal_input = keyboard_check(global.key_right) - keyboard_check(global
 var _vertical_input = keyboard_check(global.key_down) - keyboard_check(global.key_up);
 
 // Force sprite during cutscenes/look states
+if (global.cutscene_active){
+	image_index = 0;
+	image_speed = 0;
+}
 if (global.flowey_cutscene1) {
     image_index = 0;
     sprite_index = usprite;
@@ -19,6 +23,7 @@ if (!global.cutscene_active) {
 	if (_vertical_input < 0) facing = Facing.Up;
 	if (_horizontal_input > 0) facing = Facing.Right;
 	if (_horizontal_input < 0) facing = Facing.Left;
+	
 	
 	var tx = x;
 	var ty = y;

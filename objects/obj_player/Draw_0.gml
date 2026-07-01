@@ -11,5 +11,5 @@ switch (facing) {
     case Facing.Right: tx += 8; break;
 }
 
-draw_set_color(c_red);
+draw_set_color(c_white);
 draw_circle(tx, ty, 2, false);

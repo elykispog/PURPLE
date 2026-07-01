@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"invisiblewall",
-    "path":"sprites/invisiblewall/invisiblewall.yy",
+    "name":"invisiblewall1",
+    "path":"sprites/invisiblewall1/invisiblewall1.yy",
   },
   "spriteMaskId":null,
   "visible":false,
