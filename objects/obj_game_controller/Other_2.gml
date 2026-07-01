@@ -7,9 +7,11 @@ global.key_confirm = ord("Z");
 global.key_cancel = ord("X");
 global.key_menu = ord("C");
 
-enum Facing {
-    Up,
-    Down,
-    Left,
-    Right
-}
+global.level = 1;
+global.timePlayed = 0;
+global.timeStarted = current_time;
+global.currentSaveSlot = 0;
+
+global.basic_font = font_add_sprite_ext(spr_font, "gyjqpW%#m&Mw$Q*\\/XIohNc4xBG36Ant7Cefv51JTK0RHaO9PUl28izsb@?DVYFESLudrkZ+>}{<_~=-])[(!^\";,:.|'`", false, 1);
+
+display_set_gui_size(640, 480);

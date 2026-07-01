@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"ruins",
-    "path":"folders/objects/invisible_text_boxes/ruins.yy",
+    "path":"folders/objects/interactable/ruins.yy",
   },
   "parentObjectId":{
     "name":"parent_interactable_text",

@@ -24,23 +24,21 @@ if (!global.cutscene_active) {
 	if (_horizontal_input > 0) facing = Facing.Right;
 	if (_horizontal_input < 0) facing = Facing.Left;
 	
-	
-	var tx = x;
-	var ty = y;
+	var interact_x = (bbox_left + bbox_right) * 0.5;
+	var interact_y = bbox_bottom;
 
 	switch (facing) {
-		case Facing.Up: ty -= 8; break;
-		case Facing.Down: ty += 8; break;
-		case Facing.Left: tx -= 8; break;
-		case Facing.Right: tx += 8; break;
+		case Facing.Up:    interact_y -= 16; break;
+		case Facing.Down:  interact_y += 8;  break;
+		case Facing.Left:  interact_x -= 12; break;
+		case Facing.Right: interact_x += 12; break;
 	}
 
 	// Find an interactable at that point
-	var target = instance_position(tx, ty, parent_interactable_text);
+	var target = instance_position(interact_x, interact_y, parent_interactable);
 	
 	if (target != noone) {
 		if (keyboard_check_pressed(global.key_confirm)) {
-			
 			target.interact();
 		}
 	}
@@ -49,8 +47,8 @@ if (!global.cutscene_active) {
     var _hsp = _horizontal_input * _spd;
     var _vsp = _vertical_input * _spd;
 	
-    move_and_collide(_hsp, 0, obj_invisiblewall);
-	move_and_collide(0, _vsp, obj_invisiblewall);
+    move_and_collide(_hsp, 0, obj_modularHitbox);
+	move_and_collide(0, _vsp, obj_modularHitbox);
 
     // 3. Animation and Sprite Management
     if (_horizontal_input == 0 && _vertical_input == 0) {

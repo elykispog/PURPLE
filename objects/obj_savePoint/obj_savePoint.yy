@@ -2,16 +2,19 @@
   "$GMObject":"",
   "%Name":"obj_savePoint",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_savePoint",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"ruins",
+    "path":"folders/objects/interactable/ruins.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"parent_interactable_text",
+    "path":"objects/parent_interactable_text/parent_interactable_text.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

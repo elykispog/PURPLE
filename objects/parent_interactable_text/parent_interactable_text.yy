@@ -9,10 +9,13 @@
   "name":"parent_interactable_text",
   "overriddenProperties":[],
   "parent":{
-    "name":"invisible_text_boxes",
-    "path":"folders/objects/invisible_text_boxes.yy",
+    "name":"interactable",
+    "path":"folders/objects/interactable.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"parent_interactable",
+    "path":"objects/parent_interactable/parent_interactable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
