@@ -25,7 +25,8 @@ if (!global.cutscene_active) {
         _vsp = (_vertical_input / l) * _spd;
     }
 
-    move_and_collide(_hsp, _vsp, obj_invisiblewall);
+    move_and_collide(_hsp, 0, obj_invisiblewall);
+	move_and_collide(0, _vsp, obj_invisiblewall);
 
     // 3. Animation and Sprite Management
     if (_horizontal_input == 0 && _vertical_input == 0) {
