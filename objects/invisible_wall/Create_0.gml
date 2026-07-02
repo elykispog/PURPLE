@@ -1,3 +1,3 @@
 event_inherited();
 
-dialogue = "invisible_wall";
+dialogue = "int_invisible_wall";

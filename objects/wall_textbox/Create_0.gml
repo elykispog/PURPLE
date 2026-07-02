@@ -1,3 +1,3 @@
 event_inherited();
 
-dialogue = "tall_wall";
+dialogue = "int_tall_wall";

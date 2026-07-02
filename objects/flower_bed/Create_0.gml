@@ -1,3 +1,3 @@
 event_inherited();
 
-dialogue = "flower_bed";
+dialogue = "int_flower_bed";
