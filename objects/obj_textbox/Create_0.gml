@@ -19,11 +19,7 @@ function resolve_localized(_s) {
             }
 
             if (token != "") {
-                var replacement = global.localized[$ token];
-
-                if (replacement == undefined) {
-                    replacement = "{" + token + "}";
-                }
+                var replacement = global.localized[$ token] ?? ("{" + token + "}");
 
                 result += replacement;
             }
