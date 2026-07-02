@@ -1,6 +1,6 @@
 event_inherited();
 
-dialogue = "savepoint"
+dialogue = "int_savepoint"
 
 /*
 on_end: function() {

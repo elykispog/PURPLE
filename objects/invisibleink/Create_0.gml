@@ -1,3 +1,3 @@
 event_inherited();
 
-dialogue = "invisible_ink";
+dialogue = "int_invisible_ink";

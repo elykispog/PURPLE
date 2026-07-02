@@ -1,6 +1,6 @@
 event_inherited();
 
-dialogue = "tall_sign";
+dialogue = "int_tall_sign";
 
 dialogue = {
 	start: {
