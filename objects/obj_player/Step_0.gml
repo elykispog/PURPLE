@@ -14,10 +14,10 @@ if (global.flowey_cutscene1) {
 }
 */
 
-if (facing == Facing.Down) {
-    image_index = 0;
-    sprite_index = dsprite;
-}
+//if (facing == Facing.Down) {
+//    image_index = 0;
+//    sprite_index = dsprite;
+//}
 
 // 2. Movement/Interaction
 if (!global.cutscene_active) {

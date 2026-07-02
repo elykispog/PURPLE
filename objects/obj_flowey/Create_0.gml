@@ -5,8 +5,6 @@ image_index = 0; // Starts on the very first frame
 
 event_inherited();
 
-myTextbox = noone;
+dialogue = "flower_bed";
 
 is_flowey = true;
-myText[0] = "* Uh..."
-myText[1] = "* Do you mind?"
