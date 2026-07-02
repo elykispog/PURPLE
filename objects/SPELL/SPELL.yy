@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"battleUI_1",
-    "path":"sprites/battleUI_1/battleUI_1.yy",
+    "name":"battleUI_1_1",
+    "path":"sprites/battleUI_1_1/battleUI_1_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

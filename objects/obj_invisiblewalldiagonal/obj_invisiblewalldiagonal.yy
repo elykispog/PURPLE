@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_invisiblewalldiagonal",
-    "path":"sprites/spr_invisiblewalldiagonal/spr_invisiblewalldiagonal.yy",
+    "name":"spr_invisiblewalldiagonal1",
+    "path":"sprites/spr_invisiblewalldiagonal1/spr_invisiblewalldiagonal1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
