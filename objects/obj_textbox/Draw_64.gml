@@ -128,10 +128,12 @@ if (charCount < string_length(wrappedText)) {
 
 textPart = string_copy(wrappedText, 1, charCount);
 
-draw_text_ext(
-    centeredX + xBuffer,
-    drawOffset + yBuffer,
-    textPart,
-    stringHeight,
-    boxWidth
-);
+var lines = string_split(textPart, "\n");
+
+for (var i = 0; i < array_length(lines); i++) {
+    draw_text(
+        centeredX + xBuffer,
+        drawOffset + yBuffer + i * stringHeight,
+        lines[i]
+    );
+}

@@ -51,47 +51,65 @@ function prefix_lines(_s, _prefix) {
     return result;
 }
 
-function wrap_text(_text, _width) {
-	var words = string_split(_text, " ");
+function wrap_text(_text, _width, _firstPrefix = "") {
+    var words = string_split(_text, " ");
     var lines = [];
+
     var current = "";
+    var firstLine = true;
+
     for (var i = 0; i < array_length(words); i++) {
-        var test = (current == "") ? words[i] : current + " " + words[i];
-        if (string_width(test) > _width) {
+        var word = words[i];
+        var test = (current == "") ? word : current + " " + word;
+
+        var prefix = firstLine ? _firstPrefix : "";
+
+        if (current != "" && string_width(prefix + test) > _width) {
             array_push(lines, current);
-            current = words[i];
+            current = word;
+            firstLine = false;
         } else {
             current = test;
         }
     }
-    array_push(lines, current);
+
+    if (current != "") {
+        array_push(lines, current);
+    }
+
     return lines;
 }
 
 function dialogue_load_page() {
     var page_text = resolve_localized(dialogue.pages[page]);
 
-	wrappedLines = wrap_text(page_text, boxWidth);
+    wrappedText = "";
 
-	for (var i = 0; i < array_length(wrappedLines); i++) {
-		wrappedLines[i] = "* " + wrappedLines[i];
-	}
+    var paragraphs = string_split(page_text, "\n");
 
-	wrappedText = "";
+    for (var p = 0; p < array_length(paragraphs); p++) {
+        var lines = wrap_text(paragraphs[p], boxWidth, "* ");
 
-	for (var i = 0; i < array_length(wrappedLines); i++) {
-		wrappedText += wrappedLines[i];
+        for (var i = 0; i < array_length(lines); i++) {
+            if (i == 0) {
+                wrappedText += "* " + lines[i];
+            } else {
+                wrappedText += "" + lines[i];
+            }
 
-		if (i < array_length(wrappedLines) - 1) {
-			wrappedText += "\n";
-		}
-	}
+            if (i < array_length(lines) - 1 || p < array_length(paragraphs) - 1) {
+                wrappedText += "\n";
+            }
+        }
+    }
+
     charCount = 0;
 }
 
 function dialogue_load_node(_key) {
     node_key = _key;
     dialogue = dialogue_tree[$node_key];
+	
     page = 0;
     dialogue_load_page();
 
@@ -103,7 +121,7 @@ function dialogue_load_node(_key) {
 xBuffer = 25;
 yBuffer = 20;
 boxWidth = sprite_get_width(spr_textbox) - (2*xBuffer);
-stringHeight = 50;
+stringHeight = 40;
 
 drawOffset = (type == DialogueBox.Top) ? 10 : 325;
 
