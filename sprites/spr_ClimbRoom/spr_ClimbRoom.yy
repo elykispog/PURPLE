@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"spr_ClimbRoom",
   "bboxMode":0,
-  "bbox_bottom":399,
+  "bbox_bottom":1199,
   "bbox_left":0,
   "bbox_right":681,
   "bbox_top":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":20,
   "gridY":20,
-  "height":400,
+  "height":1200,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"83ee34c0-418d-4988-88b5-0e8364349d98","blendMode":0,"displayName":"default","isLocked":false,"name":"83ee34c0-418d-4988-88b5-0e8364349d98","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
