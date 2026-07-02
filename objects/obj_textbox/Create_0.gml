@@ -73,15 +73,23 @@ function wrap_text(_text, _width) {
 }
 
 function dialogue_load_page() {
-    var page_text = prefix_lines(resolve_localized(dialogue.pages[page]), "* ");
+    var page_text = resolve_localized(dialogue.pages[page]);
+
 	wrappedLines = wrap_text(page_text, boxWidth);
-    wrappedText = "";
-    for (var i = 0; i < array_length(wrappedLines); i++) {
-        wrappedText += wrappedLines[i];
-        if (i < array_length(wrappedLines) - 1) {
-            wrappedText += "\n";
-        }
-    }
+
+	for (var i = 0; i < array_length(wrappedLines); i++) {
+		wrappedLines[i] = "* " + wrappedLines[i];
+	}
+
+	wrappedText = "";
+
+	for (var i = 0; i < array_length(wrappedLines); i++) {
+		wrappedText += wrappedLines[i];
+
+		if (i < array_length(wrappedLines) - 1) {
+			wrappedText += "\n";
+		}
+	}
     charCount = 0;
 }
 

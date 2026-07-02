@@ -2,23 +2,6 @@
 var _horizontal_input = keyboard_check(global.key_right) - keyboard_check(global.key_left);
 var _vertical_input = keyboard_check(global.key_down) - keyboard_check(global.key_up);
 
-// Force sprite during cutscenes/look states
-if (global.cutscene_active){
-	image_index = 0;
-	image_speed = 0;
-}
-/*
-if (global.flowey_cutscene1) {
-    image_index = 0;
-    sprite_index = usprite;
-}
-*/
-
-//if (facing == Facing.Down) {
-//    image_index = 0;
-//    sprite_index = dsprite;
-//}
-
 // 2. Movement/Interaction
 if (!frozen) {
 	if (_vertical_input > 0) facing = Facing.Down;
