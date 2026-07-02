@@ -1,0 +1,10 @@
+{
+    "start": {
+        "pages": [
+            "{start.1}",
+            "{start.2}",
+            "{start.3}",
+            "{start.4}"
+        ]
+    }   
+}

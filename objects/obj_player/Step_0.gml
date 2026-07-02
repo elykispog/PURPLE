@@ -7,12 +7,14 @@ if (global.cutscene_active){
 	image_index = 0;
 	image_speed = 0;
 }
+/*
 if (global.flowey_cutscene1) {
     image_index = 0;
     sprite_index = usprite;
 }
+*/
 
-if (global.lookdown) {
+if (facing == Facing.Down) {
     image_index = 0;
     sprite_index = dsprite;
 }

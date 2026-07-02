@@ -1,3 +1,60 @@
+function resolve_localized(_s) {
+    var result = "";
+    var i = 1;
+
+    while (i <= string_length(_s)) {
+        var c = string_char_at(_s, i);
+
+        if (c == "{") {
+            var j = i + 1;
+            var token = "";
+
+            while (j <= string_length(_s)) {
+                var c2 = string_char_at(_s, j);
+
+                if (c2 == "}") break;
+
+                token += c2;
+                j++;
+            }
+
+            if (token != "") {
+                var replacement = global.localized[$ token];
+
+                if (replacement == undefined) {
+                    replacement = "{" + token + "}";
+                }
+
+                result += replacement;
+            }
+
+            i = j; // skip closing }
+        }
+        else {
+            result += c;
+        }
+
+        i++;
+    }
+
+    return result;
+}
+
+function prefix_lines(_s, _prefix) {
+    var lines = string_split(_s, "\n");
+    var result = "";
+
+    for (var i = 0; i < array_length(lines); i++) {
+        result += _prefix + lines[i];
+
+        if (i < array_length(lines) - 1) {
+            result += "\n";
+        }
+    }
+
+    return result;
+}
+
 function wrap_text(_text, _width) {
 	var words = string_split(_text, " ");
     var lines = [];
@@ -16,7 +73,8 @@ function wrap_text(_text, _width) {
 }
 
 function dialogue_load_page() {
-    wrappedLines = wrap_text(dialogue.pages[page], boxWidth);
+    var page_text = prefix_lines(resolve_localized(dialogue.pages[page]), "* ");
+	wrappedLines = wrap_text(page_text, boxWidth);
     wrappedText = "";
     for (var i = 0; i < array_length(wrappedLines); i++) {
         wrappedText += wrappedLines[i];
@@ -35,6 +93,7 @@ function dialogue_load_node(_key) {
 
     choiceCount = variable_struct_exists(dialogue, "choices") ? array_length(dialogue.choices) : 0;
     selectedChoice = 0;
+	choosing = false;
 }
 
 xBuffer = 25;

@@ -1,5 +1,5 @@
-xBuffer = 35;
-yBuffer = 30;
+xBuffer = 20;
+yBuffer = 15;
 
 boxWidth = sprite_get_width(spr_savebox) - (2 * xBuffer);
 boxHeight = sprite_get_height(spr_savebox) - (2 * yBuffer);

@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"bed_of_flowers",
+  "%Name":"flower_bed",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"bed_of_flowers",
+  "name":"flower_bed",
   "overriddenProperties":[],
   "parent":{
     "name":"ruins",
