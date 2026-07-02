@@ -1,4 +1,4 @@
-if (global.cutscene_active) exit;
+if (frozen) exit;
 
 if (keyboard_check_pressed(global.key_left)) {
 	sprite_index = lsprite;

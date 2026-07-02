@@ -10,10 +10,13 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"actors",
+    "path":"folders/actors.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"parent_actor",
+    "path":"objects/parent_actor/parent_actor.yy",
+  },
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
