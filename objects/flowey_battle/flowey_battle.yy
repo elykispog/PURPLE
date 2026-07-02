@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"flowey_battle_smile",
-    "path":"sprites/flowey_battle_smile/flowey_battle_smile.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

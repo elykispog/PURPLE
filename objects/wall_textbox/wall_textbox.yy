@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"textboxinvis",
-    "path":"sprites/textboxinvis/textboxinvis.yy",
+    "name":"textboxinvis1",
+    "path":"sprites/textboxinvis1/textboxinvis1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

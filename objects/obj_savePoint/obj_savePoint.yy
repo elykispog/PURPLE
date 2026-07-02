@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_savePoint",
-    "path":"sprites/spr_savePoint/spr_savePoint.yy",
+    "name":"spr_savePoint1",
+    "path":"sprites/spr_savePoint1/spr_savePoint1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
