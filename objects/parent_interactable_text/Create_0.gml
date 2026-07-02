@@ -18,6 +18,6 @@ interact = function() {
 			creator: id,
 		});
 
-        global.cutscene_active = true;
+        obj_player.freeze();
     }
 };

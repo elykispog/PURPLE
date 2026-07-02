@@ -1,5 +1,3 @@
-global.cutscene_active = false;
-
 global.key_up = vk_up;
 global.key_down = vk_down;
 global.key_left = vk_left;

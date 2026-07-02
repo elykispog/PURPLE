@@ -1,22 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_flowey",
+  "%Name":"parent_actor",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_flowey",
+  "name":"parent_actor",
   "overriddenProperties":[],
   "parent":{
-    "name":"flowey",
-    "path":"folders/actors/flowey.yy",
+    "name":"actors",
+    "path":"folders/actors.yy",
   },
-  "parentObjectId":{
-    "name":"parent_interactable_text",
-    "path":"objects/parent_interactable_text/parent_interactable_text.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"flowey_pop_up",
-    "path":"sprites/flowey_pop_up/flowey_pop_up.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

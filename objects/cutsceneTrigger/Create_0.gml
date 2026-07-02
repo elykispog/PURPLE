@@ -1,1 +1,0 @@
-global.flowey_cutscene1 = false;
