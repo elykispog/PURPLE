@@ -6,6 +6,4 @@ image_index = 0; // Starts on the very first frame
 
 event_inherited();
 
-dialogue = "flower_bed";
-
-is_flowey = true;
+dialogue = "characters.flowey";

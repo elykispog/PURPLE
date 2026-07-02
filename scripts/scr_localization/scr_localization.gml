@@ -85,15 +85,33 @@ function get_dialogue_namespace(_data, _fallback) {
     return _fallback;
 }
 
-function load_dialogue_data(_room) {
-    global.dialogues = {};
+function load_dialogue_directory(_base, _relative) {
+    var files = [];
+    var dirs = [];
 
-    var file = file_find_first("dialogue/" + _room + "/*.json", fa_archive);
+    var item = file_find_first(_base + _relative + "*", fa_archive | fa_directory);
+
+    while (item != "") {
+        var full_path = _base + _relative + item;
+
+        if (directory_exists(full_path)) {
+            array_push(dirs, item);
+        } else if (filename_ext(item) == ".json") {
+            array_push(files, item);
+        }
+
+        item = file_find_next();
+    }
+
+    file_find_close();
 	
-    while (file != "") {
-        var path = "dialogue/" + _room + "/" + file;
+    for (var i = 0; i < array_length(files); i++) {
+		var file = files[i];
 
-        var f = file_text_open_read(path);
+		var relative_path = _relative + file;
+		var full_path = _base + relative_path;
+
+		var f = file_text_open_read(full_path);
 		var text = "";
 
 		while (!file_text_eof(f)) {
@@ -102,32 +120,59 @@ function load_dialogue_data(_room) {
 		}
 
 		file_text_close(f);
-		
-        var data = json_parse(text);
 
-        var file_key = filename_change_ext(file, "");
+		var data = json_parse(text);
 
-        var ns = get_dialogue_namespace(data, file_key);
-		
+		var file_key = filename_change_ext(relative_path, "");
+		file_key = string_replace_all(file_key, "\\", ".");
+		file_key = string_replace_all(file_key, "/", ".");
+
+		var ns = get_dialogue_namespace(data, file_key);
+
 		if (is_struct(data)) {
 			variable_struct_remove(data, "namespace");
 		}
 
 		global.dialogues[$ file_key] = normalize_dialogue(data, ns);
+	}
+	
+    for (var i = 0; i < array_length(dirs); i++) {
+        load_dialogue_directory(_base, _relative + dirs[i] + "/");
+    }
+}
 
-        file = file_find_next();
+function load_dialogue_data(_room) {
+    global.dialogues = {};
+    load_dialogue_directory("dialogue/" + _room + "/", "");
+}
+
+function load_localized_directory(_base, _relative) {
+    var files = [];
+    var dirs = [];
+
+    var item = file_find_first(_base + _relative + "*", fa_archive | fa_directory);
+
+    while (item != "") {
+        var full_path = _base + _relative + item;
+
+        if (directory_exists(full_path)) {
+            array_push(dirs, item);
+        } else if (filename_ext(item) == ".json") {
+            array_push(files, item);
+        }
+
+        item = file_find_next();
     }
 
     file_find_close();
-}
+	
+    for (var i = 0; i < array_length(files); i++) {
+		var file = files[i];
 
-function load_localized(_room) {
-    var file = file_find_first("i18n/" + _room + "/" + global.localization + "/*.json", fa_archive);
+		var relative_path = _relative + file;
+		var full_path = _base + relative_path;
 
-    while (file != "") {
-        var path = "i18n/" + _room + "/" + global.localization + "/" + file;
-
-        var f = file_text_open_read(path);
+		var f = file_text_open_read(full_path);
 		var text = "";
 
 		while (!file_text_eof(f)) {
@@ -136,23 +181,28 @@ function load_localized(_room) {
 		}
 
 		file_text_close(f);
-		
-        var data = json_parse(text);
 
-        var file_key = filename_change_ext(file, "");
-		
-        var keys = variable_struct_get_names(data);
-		for (var i = 0; i < array_length(keys); i++) {
-			var k = keys[i];
-			var combined_key = file_key + "." + string(k);
+		var data = json_parse(text);
 
-			global.localized[$ combined_key] = variable_struct_get(data, k);
+		var file_key = filename_change_ext(relative_path, "");
+		file_key = string_replace_all(file_key, "\\", ".");
+		file_key = string_replace_all(file_key, "/", ".");
+
+		var keys = variable_struct_get_names(data);
+
+		for (var j = 0; j < array_length(keys); j++) {
+			var k = keys[j];
+			global.localized[$ file_key + "." + string(k)] = variable_struct_get(data, k);
 		}
-
-        file = file_find_next();
+	}
+	
+    for (var i = 0; i < array_length(dirs); i++) {
+        load_localized_directory(_base, _relative + dirs[i] + "/");
     }
+}
 
-    file_find_close();
+function load_localized(_room) {
+    load_localized_directory("i18n/" + _room + "/" + global.localization + "/", "");
 }
 
 function load_dialogue(_room) {
