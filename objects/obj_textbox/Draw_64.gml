@@ -122,7 +122,7 @@ if (charCount < string_length(wrappedText)) {
     if (variable_struct_exists(dialogue, "sound")) {
         audio_play_sound(dialogue.sound, 0, false, 1.0);
     } else {
-        audio_play_sound(snd_txt1, 0, false, 1.0);
+        audio_play_sound(snd_txt, 0, false, 1.0);
 	}
 }
 

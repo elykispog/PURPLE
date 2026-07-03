@@ -119,7 +119,7 @@
   "origin":0,
   "parent":{
     "name":"ui",
-    "path":"folders/sprites/spritesheets/ui.yy",
+    "path":"folders/sprites/rooms/spritesheets/ui.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

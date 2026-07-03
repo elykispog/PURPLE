@@ -13,7 +13,10 @@
     "name":"flowey",
     "path":"folders/actors/flowey.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"parent_interactable_text",
+    "path":"objects/parent_interactable_text/parent_interactable_text.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -36,7 +39,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"flowey_pop_up2",
+    "path":"sprites/flowey_pop_up2/flowey_pop_up2.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"puzzle_pressure_plate2",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_large_vine",
+  "eventList":[],
   "managed":true,
-  "name":"puzzle_pressure_plate2",
+  "name":"obj_large_vine",
   "overriddenProperties":[],
   "parent":{
-    "name":"ruins",
-    "path":"folders/objects/interactable/ruins.yy",
+    "name":"assets",
+    "path":"folders/objects/assets.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"large_vines",
+    "path":"sprites/large_vines/large_vines.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

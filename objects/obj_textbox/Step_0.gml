@@ -104,6 +104,6 @@ if (choosing) {
     }
 
     if (selectedChoice != old) {
-        audio_play_sound(snd_txt1, 0, false);
+        audio_play_sound(snd_txt, 0, false);
     }
 }

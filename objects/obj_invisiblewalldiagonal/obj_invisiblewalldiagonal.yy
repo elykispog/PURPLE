@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_invisiblewalldiagonal1",
-    "path":"sprites/spr_invisiblewalldiagonal1/spr_invisiblewalldiagonal1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

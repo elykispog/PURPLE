@@ -30,13 +30,15 @@
     {"x":0.0,"y":32.0,},
   ],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"owner","filters":[],"listItems":[],"multiselect":false,"name":"owner","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_invisiblewall1",
-    "path":"sprites/spr_invisiblewall1/spr_invisiblewall1.yy",
+    "name":"spr_invisiblewall2",
+    "path":"sprites/spr_invisiblewall2/spr_invisiblewall2.yy",
   },
   "spriteMaskId":null,
   "visible":false,

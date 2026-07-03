@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"spritesheets",
-    "path":"folders/sprites/spritesheets.yy",
+    "path":"folders/sprites/rooms/spritesheets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

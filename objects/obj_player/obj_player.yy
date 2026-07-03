@@ -39,7 +39,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"dsprite2",
+    "path":"sprites/dsprite2/dsprite2.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

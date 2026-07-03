@@ -1,1 +1,5 @@
-if (!global.cutscene_active) global.cutscene_active = true;
+if (!global.flowey_cutscene1)
+{
+    global.flowey_cutscene1 = true;
+	global.cutscene_active = true;
+}

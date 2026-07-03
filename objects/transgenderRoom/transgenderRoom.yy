@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"cutsceneTrigger",
+  "%Name":"transgenderRoom",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"cutsceneTrigger",
+  "name":"transgenderRoom",
   "overriddenProperties":[],
   "parent":{
-    "name":"triggers",
-    "path":"folders/objects/triggers.yy",
+    "name":"roomTransitions",
+    "path":"folders/objects/roomTransitions.yy",
   },
   "parentObjectId":null,
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -44,5 +44,5 @@
     "path":"sprites/spr_door2/spr_door2.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
