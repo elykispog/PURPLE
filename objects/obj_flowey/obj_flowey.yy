@@ -40,8 +40,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"flowey_pop_up2",
-    "path":"sprites/flowey_pop_up2/flowey_pop_up2.yy",
+    "name":"flowey_pop_up",
+    "path":"sprites/flowey_pop_up/flowey_pop_up.yy",
   },
   "spriteMaskId":null,
   "visible":true,

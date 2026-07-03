@@ -40,8 +40,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"dsprite2",
-    "path":"sprites/dsprite2/dsprite2.yy",
+    "name":"dsprite",
+    "path":"sprites/dsprite/dsprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

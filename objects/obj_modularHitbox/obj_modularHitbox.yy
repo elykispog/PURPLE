@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_invisiblewall",
-    "path":"sprites/spr_invisiblewall/spr_invisiblewall.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
