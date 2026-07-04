@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"puzzle_pressure_plate2",
+  "%Name":"interaction",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"puzzle_pressure_plate2",
+  "name":"interaction",
   "overriddenProperties":[],
   "parent":{
     "name":"ruins",
     "path":"folders/objects/interactable/ruins.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"parent_interactable_text",
+    "path":"objects/parent_interactable_text/parent_interactable_text.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"textboxinvis",
+    "path":"sprites/textboxinvis/textboxinvis.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
