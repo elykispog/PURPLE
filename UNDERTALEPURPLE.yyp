@@ -90,6 +90,7 @@
     {"id":{"name":"obj_savePoint","path":"objects/obj_savePoint/obj_savePoint.yy",},},
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},},
     {"id":{"name":"obj_title_menu","path":"objects/obj_title_menu/obj_title_menu.yy",},},
+    {"id":{"name":"obj_vine_climb","path":"objects/obj_vine_climb/obj_vine_climb.yy",},},
     {"id":{"name":"obj_vine","path":"objects/obj_vine/obj_vine.yy",},},
     {"id":{"name":"parent_actor","path":"objects/parent_actor/parent_actor.yy",},},
     {"id":{"name":"parent_interactable_text","path":"objects/parent_interactable_text/parent_interactable_text.yy",},},
