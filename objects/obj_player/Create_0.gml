@@ -2,10 +2,11 @@ event_inherited();
 
 image_speed = 0;
 facing = Facing.Down;
+climbing = false;
 climbing = function(){
 x = obj_vine_climb.x
 y = obj_vine_climb.y
-climbing = true
+climbing = true;
 }
 set_facing = function(_dir) {
 	facing = _dir;

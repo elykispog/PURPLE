@@ -28,7 +28,8 @@ if (!frozen) {
 			exit;
 		}
 	}
-	
+
+
     var _spd = 3;
     var _hsp = _horizontal_input * _spd;
     var _vsp = _vertical_input * _spd;
