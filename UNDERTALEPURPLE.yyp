@@ -112,6 +112,8 @@
     {"id":{"name":"ruins_Room5","path":"rooms/ruins_Room5/ruins_Room5.yy",},},
     {"id":{"name":"ruins_Room6","path":"rooms/ruins_Room6/ruins_Room6.yy",},},
     {"id":{"name":"ruins_Room7","path":"rooms/ruins_Room7/ruins_Room7.yy",},},
+    {"id":{"name":"ruins_Room8","path":"rooms/ruins_Room8/ruins_Room8.yy",},},
+    {"id":{"name":"snowdin_Room1","path":"rooms/snowdin_Room1/snowdin_Room1.yy",},},
     {"id":{"name":"scr_game_data","path":"scripts/scr_game_data/scr_game_data.yy",},},
     {"id":{"name":"scr_localization","path":"scripts/scr_localization/scr_localization.yy",},},
     {"id":{"name":"seq_battlestart","path":"sequences/seq_battlestart/seq_battlestart.yy",},},
@@ -188,6 +190,8 @@
     {"roomId":{"name":"ruins_Room5","path":"rooms/ruins_Room5/ruins_Room5.yy",},},
     {"roomId":{"name":"ruins_Room6","path":"rooms/ruins_Room6/ruins_Room6.yy",},},
     {"roomId":{"name":"ruins_Room7","path":"rooms/ruins_Room7/ruins_Room7.yy",},},
+    {"roomId":{"name":"snowdin_Room1","path":"rooms/snowdin_Room1/snowdin_Room1.yy",},},
+    {"roomId":{"name":"ruins_Room8","path":"rooms/ruins_Room8/ruins_Room8.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

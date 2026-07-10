@@ -1,3 +1,3 @@
 interact = function() {
-	obj_player.climbing()
+	obj_player.set_climbing()
 }

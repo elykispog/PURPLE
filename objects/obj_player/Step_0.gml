@@ -2,6 +2,7 @@
 var _horizontal_input = keyboard_check(global.key_right) - keyboard_check(global.key_left);
 var _vertical_input = keyboard_check(global.key_down) - keyboard_check(global.key_up);
 
+
 // 2. Movement/Interaction
 if (!frozen) {
 	if (_vertical_input > 0) facing = Facing.Down;
@@ -29,8 +30,48 @@ if (!frozen) {
 		}
 	}
 
+if (climbing) 
+{
+    var _spd = 1;
+    var _hsp = _horizontal_input * 0;
+    var _vsp = _vertical_input * _spd;
 
-    var _spd = 3;
+    // Only allow climbing vertically when facing up/down
+    if (facing == Facing.Left || facing == Facing.Right)
+    {
+        _vsp = 0;
+    }
+	
+    move_and_collide(_hsp, 0, obj_modularHitbox);
+	move_and_collide(0, _vsp, obj_modularHitbox);
+
+    // 3. Animation and Sprite Management
+    if (_horizontal_input == 0 && _vertical_input == 0) {
+        // Idle
+        image_speed = 0;
+        image_index = 0;
+    } else {
+        // Walking
+        image_speed = 1;
+
+        // Choose sprite based on movement direction
+        if (_horizontal_input != 0) {
+            if (_horizontal_input > 0) {
+                sprite_index = rsprite;
+            } else {
+                sprite_index = lsprite;
+            }
+        } else {
+            if (_vertical_input > 0) {
+                sprite_index = dsprite;
+            } else {
+                sprite_index = usprite;
+            }
+        }
+    }
+}
+} if (!climbing) {
+	var _spd = 3;
     var _hsp = _horizontal_input * _spd;
     var _vsp = _vertical_input * _spd;
 	
@@ -60,5 +101,117 @@ if (!frozen) {
                 sprite_index = usprite;
             }
         }
+    }
+}
+
+
+// RIGHT DASH
+if (sprite_index == rsprite)
+{
+    if (keyboard_check_pressed(global.key_confirm))
+    {
+        var nearest_vine = noone;
+        var nearest_dist = 999999;
+
+        for (var i = 0; i < instance_number(obj_vine); i++)
+        {
+            var vine = instance_find(obj_vine, i);
+
+            // Check vines to the right and anywhere vertically along the vine
+            if (vine.bbox_left > x && y >= vine.bbox_top && y <= vine.bbox_bottom)
+            {
+                var dist = vine.bbox_left - x;
+
+                if (dist < nearest_dist)
+                {
+                    nearest_dist = dist;
+                    nearest_vine = vine;
+                }
+            }
+        }
+
+        if (nearest_vine != noone)
+        {
+            vine_target_x = nearest_vine.x;
+            vine_direction = 1;
+
+            vine_dash = true;
+            frozen = true;
+
+            image_index = 0;
+            image_speed = 1;
+        }
+    }
+}
+
+
+// LEFT DASH
+if (sprite_index == lsprite)
+{
+    if (keyboard_check_pressed(global.key_confirm))
+    {
+        var nearest_vine = noone;
+        var nearest_dist = 999999;
+
+        for (var i = 0; i < instance_number(obj_vine); i++)
+        {
+            var vine = instance_find(obj_vine, i);
+
+            // Check vines to the left and anywhere vertically along the vine
+            if (vine.bbox_right < x && y >= vine.bbox_top && y <= vine.bbox_bottom)
+            {
+                var dist = x - vine.bbox_right;
+
+                if (dist < nearest_dist)
+                {
+                    nearest_dist = dist;
+                    nearest_vine = vine;
+                }
+            }
+        }
+
+        if (nearest_vine != noone)
+        {
+            vine_target_x = nearest_vine.x;
+            vine_direction = -1;
+
+            vine_dash = true;
+            frozen = true;
+
+            image_index = 0;
+            image_speed = 1;
+        }
+    }
+}
+
+
+// VINE DASH MOVEMENT
+if (vine_dash)
+{
+    if (x < vine_target_x)
+    {
+        x = min(x + vine_speed, vine_target_x);
+    }
+    else if (x > vine_target_x)
+    {
+        x = max(x - vine_speed, vine_target_x);
+    }
+
+    if (x == vine_target_x)
+    {
+        vine_dash = false;
+        frozen = false;
+
+        if (vine_direction == 1)
+        {
+            sprite_index = rsprite;
+        }
+        else
+        {
+            sprite_index = lsprite;
+        }
+
+        image_index = 0;
+        image_speed = 0;
     }
 }
