@@ -2,8 +2,8 @@
 
 where cmake >nul 2>nul
 if %errorlevel% neq 0 (
-    echo Error: CMake is missing! CMake is required to compile Undertale Purple
-    exit /b 1
+    echo Without CMake, GMLua will NOT automatically compile!
+    exit /b 0
 )
 
 cd /d "%~dp0extensions"
