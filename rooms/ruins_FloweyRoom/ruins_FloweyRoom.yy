@@ -7,8 +7,6 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_155BA081","path":"rooms/ruins_FloweyRoom/ruins_FloweyRoom.yy",},
-    {"name":"inst_35A3F036","path":"rooms/ruins_FloweyRoom/ruins_FloweyRoom.yy",},
-    {"name":"inst_6B56DC73","path":"rooms/ruins_FloweyRoom/ruins_FloweyRoom.yy",},
     {"name":"inst_2F74BF1","path":"rooms/ruins_FloweyRoom/ruins_FloweyRoom.yy",},
     {"name":"inst_3B263133","path":"rooms/ruins_FloweyRoom/ruins_FloweyRoom.yy",},
     {"name":"inst_296CAAC0","path":"rooms/ruins_FloweyRoom/ruins_FloweyRoom.yy",},

@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_vine",
+  "%Name":"interaction",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_vine",
+  "name":"interaction",
   "overriddenProperties":[],
   "parent":{
-    "name":"assets",
-    "path":"folders/objects/assets.yy",
+    "name":"ruins",
+    "path":"folders/objects/interactable/ruins.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"parent_interactable_text",
+    "path":"objects/parent_interactable_text/parent_interactable_text.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"vines",
-    "path":"sprites/vines/vines.yy",
+    "name":"textboxinvis",
+    "path":"sprites/textboxinvis/textboxinvis.yy",
   },
   "spriteMaskId":null,
   "visible":true,
