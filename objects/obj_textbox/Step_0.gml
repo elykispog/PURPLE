@@ -35,7 +35,7 @@ if (keyboard_check_pressed(global.key_confirm)) {
         }
     }
     else {
-        // We're choosing
+        // Choosing
         var _choice = dialogue.choices[selectedChoice];
 
         if (variable_struct_exists(dialogue, "on_choice")) {

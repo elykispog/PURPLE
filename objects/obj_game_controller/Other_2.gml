@@ -16,7 +16,11 @@ global.basic_font = font_add_sprite_ext(spr_font, "gyjqpW%#m&Mw$Q*\\/XIohNc4xBG3
 
 global.localization = "en";
 
-global.dialogues = {};
-global.localized = {};
+initalize_localization_system();
+initalize_cutscene_system();
+
+persistent = true;
 
 display_set_gui_size(640, 480);
+
+room_goto(ruins_Room1);

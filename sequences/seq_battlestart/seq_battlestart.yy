@@ -34,8 +34,6 @@
   "playbackSpeedType":0,
   "resourceType":"GMSequence",
   "resourceVersion":"2.0",
-  "seqHeight":16.56562,
-  "seqWidth":9.5,
   "showBackdrop":true,
   "showBackdropImage":false,
   "spriteId":null,

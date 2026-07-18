@@ -1,5 +1,0 @@
-[
-    { "type": "freeze", "actor": "player" },
-    { "type": "face", "actor": "player", "direction": "down" },
-    { "type": "animate", "actor": "flowey", "animation": "emerge" }
-]

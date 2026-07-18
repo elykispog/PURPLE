@@ -85,132 +85,74 @@ function get_dialogue_namespace(_data, _fallback) {
     return _fallback;
 }
 
-function load_dialogue_directory(_base, _relative) {
-    var files = [];
-    var dirs = [];
-
-    var item = file_find_first(_base + _relative + "*", fa_archive | fa_directory);
-
-    while (item != "") {
-        var full_path = _base + _relative + item;
-
-        if (directory_exists(full_path)) {
-            array_push(dirs, item);
-        } else if (filename_ext(item) == ".json") {
-            array_push(files, item);
-        }
-
-        item = file_find_next();
-    }
-
-    file_find_close();
+function LocalizationSystem() constructor {
+	__dialogues = {};
+	__localized = {};
 	
-    for (var i = 0; i < array_length(files); i++) {
-		var file = files[i];
-
-		var relative_path = _relative + file;
-		var full_path = _base + relative_path;
-
-		var f = file_text_open_read(full_path);
-		var text = "";
-
-		while (!file_text_eof(f)) {
-			text += file_text_read_string(f);
-			file_text_readln(f);
-		}
-
-		file_text_close(f);
-
-		var data = json_parse(text);
-
-		var file_key = filename_change_ext(relative_path, "");
-		file_key = string_replace_all(file_key, "\\", ".");
-		file_key = string_replace_all(file_key, "/", ".");
-
-		var ns = get_dialogue_namespace(data, file_key);
-
-		if (is_struct(data)) {
-			variable_struct_remove(data, "namespace");
-		}
-
-		global.dialogues[$ file_key] = normalize_dialogue(data, ns);
-	}
+	static load_dialogue_data = function(_area) {
+		__dialogues = {};
 	
-    for (var i = 0; i < array_length(dirs); i++) {
-        load_dialogue_directory(_base, _relative + dirs[i] + "/");
-    }
-}
-
-function load_dialogue_data(_room) {
-    global.dialogues = {};
-    load_dialogue_directory("dialogue/" + _room + "/", "");
-}
-
-function load_localized_directory(_base, _relative) {
-    var files = [];
-    var dirs = [];
-
-    var item = file_find_first(_base + _relative + "*", fa_archive | fa_directory);
-
-    while (item != "") {
-        var full_path = _base + _relative + item;
-
-        if (directory_exists(full_path)) {
-            array_push(dirs, item);
-        } else if (filename_ext(item) == ".json") {
-            array_push(files, item);
-        }
-
-        item = file_find_next();
-    }
-
-    file_find_close();
+		var _base = "dialogue/" + _area + "/";
+		var _files = file_list_recursive(_base, ".json");
 	
-    for (var i = 0; i < array_length(files); i++) {
-		var file = files[i];
-
-		var relative_path = _relative + file;
-		var full_path = _base + relative_path;
-
-		var f = file_text_open_read(full_path);
-		var text = "";
-
-		while (!file_text_eof(f)) {
-			text += file_text_read_string(f);
-			file_text_readln(f);
-		}
-
-		file_text_close(f);
-
-		var data = json_parse(text);
-
-		var file_key = filename_change_ext(relative_path, "");
-		file_key = string_replace_all(file_key, "\\", ".");
-		file_key = string_replace_all(file_key, "/", ".");
-
-		var keys = variable_struct_get_names(data);
-
-		for (var j = 0; j < array_length(keys); j++) {
-			var k = keys[j];
-			global.localized[$ file_key + "." + string(k)] = variable_struct_get(data, k);
+		for (var i = 0; i < array_length(_files); ++i) {
+			var _file = _files[i];
+			
+			var _full_path = _base + _file;
+			var _json_data = json_parse(file_read(_full_path));
+			
+			var _file_key = filename_change_ext(_file, "");
+			_file_key = string_replace_all(_file_key, "\\", ".");
+			_file_key = string_replace_all(_file_key, "/", ".");
+			
+			var _namespace = get_dialogue_namespace(_json_data, _file_key);
+			
+			if (is_struct(_json_data)) {
+				variable_struct_remove(_json_data, "namespace");
+			}
+			
+			__dialogues[$ _file_key] = normalize_dialogue(_json_data, _namespace);
 		}
 	}
+
+	static load_localized = function(_area) {
+		__localized = {};
+		
+		var _base = "i18n/" + _area + "/" + global.localization + "/";
+		var _files = file_list_recursive(_base, ".json");
+
+		for (var i = 0; i < array_length(_files); ++i) {
+			var _file = _files[i];
+
+			var _data = json_parse(file_read(_base + _file));
+			
+			var _file_key = filename_change_ext(_file, "");
+			_file_key = string_replace_all(_file_key, "\\", ".");
+			_file_key = string_replace_all(_file_key, "/", ".");
+			
+			var _keys = variable_struct_get_names(_data);
+			
+			for (var j = 0; j < array_length(_keys); ++j) {
+				var _key = _keys[j];
+				__localized[$ _file_key + "." + string(_key)] = variable_struct_get(_data, _key);
+			}
+		}
+	}
+
+	static load_dialogue = function(_area) {
+		load_dialogue_data(_area);
+		load_localized(_area);
+	}
+
+	static get_text = function(_key) {
+		return __localized[$ _key];
+	}
 	
-    for (var i = 0; i < array_length(dirs); i++) {
-        load_localized_directory(_base, _relative + dirs[i] + "/");
-    }
+	static get_dialogue = function(_dialogue) {
+		return __dialogues[$ _dialogue];
+	}
 }
 
-function load_localized(_room) {
-    load_localized_directory("i18n/" + _room + "/" + global.localization + "/", "");
-}
-
-function load_dialogue(_room) {
-    load_dialogue_data(_room);
-    load_localized(_room);
-}
-
-function get_text(_key) {
-	var text = global.localized[$ _key];
-	return text;
+function initalize_localization_system() {
+	global.localization_system = new LocalizationSystem();
 }

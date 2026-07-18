@@ -1,0 +1,1 @@
+global.cutscene_system.tick();

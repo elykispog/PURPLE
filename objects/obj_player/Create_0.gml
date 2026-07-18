@@ -58,4 +58,8 @@ unfreeze = function() {
 	frozen = false;
 }
 
+is_frozen = function() {
+	return frozen;
+}
+
 depth = -100;

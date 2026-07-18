@@ -1,1 +1,1 @@
-if (!global.cutscene_active) global.cutscene_active = true;
+on_cross();

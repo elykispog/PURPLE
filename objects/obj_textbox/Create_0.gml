@@ -19,7 +19,7 @@ function resolve_localized(_s) {
             }
 
             if (token != "") {
-                var replacement = global.localized[$ token] ?? ("{" + token + "}");
+                var replacement = global.localization_system.get_text(token) ?? ("{" + token + "}");
 
                 result += replacement;
             }
@@ -124,5 +124,7 @@ boxWidth = sprite_get_width(spr_textbox) - (2*xBuffer);
 stringHeight = 40;
 
 drawOffset = (type == DialogueBox.Top) ? 10 : 325;
+
+draw_set_font(global.basic_font);
 
 dialogue_load_node(node_key);

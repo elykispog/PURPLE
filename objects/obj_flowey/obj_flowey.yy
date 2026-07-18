@@ -14,8 +14,8 @@
     "path":"folders/actors/flowey.yy",
   },
   "parentObjectId":{
-    "name":"parent_interactable_text",
-    "path":"objects/parent_interactable_text/parent_interactable_text.yy",
+    "name":"parent_actor",
+    "path":"objects/parent_actor/parent_actor.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
